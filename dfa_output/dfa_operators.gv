@@ -1,0 +1,64 @@
+digraph dfa_operators {
+	node [shape=doublecircle]
+	node [fixedsize=true]
+	node [width=1.2]
+	edge [shape=normal]
+	start_operators [shape=point width=0]
+	q0 [shape=circle width=1]
+	start_operators -> q0 [label=start]
+	q1 [label="q1: 
+Relational_
+op_lessthan"]
+	q2 [label="q2:
+Relational_
+op_lessthan
+orequal"]
+	q3 [label="q3:
+Relational_
+op_notequal"]
+	q4 [label="q4:
+Relational_
+op_morethan"]
+	q5 [label="q5:
+Relational_
+op_morethan
+orequal"]
+	q6 [label="q6:
+Arithmetic_
+op_divide"]
+	q7 [label="q7:
+Arithmetic_
+op_multiply"]
+	q8 [label="q8:
+Arithmetic_
+op_subtract"]
+	q9 [label="q9:
+Arithmetic_
+op_add"]
+	q10 [label="q10:
+And"]
+	q11 [label="q11:
+Dot"]
+	q12 [label="q12:
+close_
+bracket"]
+	q13 [label="q13:
+open_
+bracket"]
+	q14 [label="q14:
+Or"]
+	q0 -> q1 [label="<"]
+	q1 -> q2 [label="="]
+	q1 -> q3 [label=">"]
+	q0 -> q4 [label=">"]
+	q4 -> q5 [label="="]
+	q0 -> q6 [label="/"]
+	q0 -> q7 [label="*"]
+	q0 -> q8 [label="-"]
+	q0 -> q9 [label="+"]
+	q0 -> q10 [label=","]
+	q0 -> q11 [label="."]
+	q0 -> q12 [label=")"]
+	q0 -> q13 [label="("]
+	q0 -> q14 [label=";"]
+}

@@ -1,0 +1,224 @@
+digraph dfa_reserved_words {
+	node [shape=doublecircle]
+	node [fixedsize=true]
+	node [width=1]
+	edge [shape=normal]
+	start_reserved_words [shape=point width=0]
+	s0 [shape=circle width=1]
+	s67 [label="s67: 
+identifier"]
+	start_reserved_words -> s0 [label=start]
+	s1 [label="s1: 
+identifier"]
+	s2 [label="s2: 
+identifier"]
+	s3 [label="s3: 
+identifier"]
+	s4 [label="s4: 
+identifier"]
+	s5 [label="s5: 
+identifier"]
+	s6 [label="s6: 
+identifier"]
+	s7 [label="s7: 
+identifier"]
+	s8 [label="s8: 
+identifier"]
+	s9 [label="s9: 
+identifier"]
+	s10 [label="s10: 
+predicates"]
+	s0 -> s1 [label=p]
+	s1 -> s2 [label=r]
+	s2 -> s3 [label=e]
+	s3 -> s4 [label=d]
+	s4 -> s5 [label=i]
+	s5 -> s6 [label=c]
+	s6 -> s7 [label=a]
+	s7 -> s8 [label=t]
+	s8 -> s9 [label=e]
+	s9 -> s10 [label=s]
+	s10 -> s67 [label="[a-zA-Z0-9]"]
+	s11 [label="s11: 
+identifier"]
+	s12 [label="s12: 
+identifier"]
+	s13 [label="s13: 
+identifier"]
+	s14 [label="s14: 
+goal"]
+	s0 -> s11 [label=g]
+	s11 -> s12 [label=o]
+	s12 -> s13 [label=a]
+	s13 -> s14 [label=l]
+	s14 -> s67 [label="[a-zA-Z0-9]"]
+	s15 [label="s15: 
+identifier"]
+	s16 [label="s16: 
+identifier"]
+	s17 [label="s17: 
+identifier"]
+	s18 [label="s18: 
+identifier"]
+	s19 [label="s19: 
+identifier"]
+	s20 [label="s20: 
+identifier"]
+	s21 [label="s21: 
+clauses"]
+	s0 -> s15 [label=c]
+	s15 -> s16 [label=l]
+	s16 -> s17 [label=a]
+	s17 -> s18 [label=u]
+	s18 -> s19 [label=s]
+	s19 -> s20 [label=e]
+	s20 -> s21 [label=s]
+	s21 -> s67 [label="[a-zA-Z0-9]"]
+	s22 [label="s22: 
+identifier"]
+	s23 [label="s23: 
+identifier"]
+	s24 [label="s24: 
+identifier"]
+	s25 [label="s25: 
+read"]
+	s0 -> s22 [label=r]
+	s22 -> s23 [label=e]
+	s23 -> s24 [label=a]
+	s24 -> s25 [label=d]
+	s25 -> s67 [label="[a-zA-Z0-9]"]
+	s26 [label="s26: 
+identifier"]
+	s27 [label="s27: 
+readln"]
+	s25 -> s26 [label=l]
+	s26 -> s27 [label=n]
+	s27 -> s67 [label="[a-zA-Z0-9]"]
+	s28 [label="s28: 
+identifier"]
+	s29 [label="s29: 
+identifier"]
+	s30 [label="s30: 
+readint"]
+	s25 -> s28 [label=i]
+	s28 -> s29 [label=n]
+	s29 -> s30 [label=t]
+	s30 -> s67 [label="[a-zA-Z0-9]"]
+	s31 [label="s31: 
+identifier"]
+	s32 [label="s32: 
+identifier"]
+	s33 [label="s33: 
+identifier"]
+	s34 [label="s34: 
+readchar"]
+	s25 -> s31 [label=c]
+	s31 -> s32 [label=h]
+	s32 -> s33 [label=a]
+	s33 -> s34 [label=r]
+	s34 -> s67 [label="[a-zA-Z0-9]"]
+	s35 [label="s35: 
+identifier"]
+	s36 [label="s36: 
+identifier"]
+	s37 [label="s37: 
+identifier"]
+	s38 [label="s38: 
+identifier"]
+	s39 [label="s39: 
+write"]
+	s0 -> s35 [label=w]
+	s35 -> s36 [label=r]
+	s36 -> s37 [label=i]
+	s37 -> s38 [label=t]
+	s38 -> s39 [label=e]
+	s39 -> s67 [label="[a-zA-Z0-9]"]
+	s40 [label="s40: 
+identifier"]
+	s41 [label="s41: 
+identifier"]
+	s42 [label="s42: 
+identifier"]
+	s43 [label="s43: 
+identifier"]
+	s44 [label="s44: 
+identifier"]
+	s45 [label="s45: 
+symbol"]
+	s0 -> s40 [label=s]
+	s40 -> s41 [label=y]
+	s41 -> s42 [label=m]
+	s42 -> s43 [label=b]
+	s43 -> s44 [label=o]
+	s44 -> s45 [label=l]
+	s45 -> s67 [label="[a-zA-Z0-9]"]
+	s46 [label="s46: 
+identifier"]
+	s47 [label="s47: 
+identifier"]
+	s48 [label="s48: 
+identifier"]
+	s49 [label="s49: 
+identifier"]
+	s50 [label="s50: 
+identifier"]
+	s51 [label="s51: 
+identifier"]
+	s52 [label="s52: 
+integer"]
+	s0 -> s46 [label=i]
+	s46 -> s47 [label=n]
+	s47 -> s48 [label=t]
+	s48 -> s49 [label=e]
+	s49 -> s50 [label=g]
+	s50 -> s51 [label=e]
+	s51 -> s52 [label=r]
+	s52 -> s67 [label="[a-zA-Z0-9]"]
+	s53 [label="s53: 
+identifier"]
+	s54 [label="s54: 
+identifier"]
+	s55 [label="s55: 
+identifier"]
+	s56 [label="s56: 
+char"]
+	s0 -> s53 [label=c]
+	s53 -> s54 [label=h]
+	s54 -> s55 [label=a]
+	s55 -> s56 [label=r]
+	s56 -> s67 [label="[a-zA-Z0-9]"]
+	s57 [label="s57: 
+identifier"]
+	s58 [label="s58: 
+identifier"]
+	s59 [label="s59: 
+identifier"]
+	s60 [label="s60: 
+real"]
+	s0 -> s57 [label=r]
+	s57 -> s58 [label=e]
+	s58 -> s59 [label=a]
+	s59 -> s60 [label=l]
+	s60 -> s67 [label="[a-zA-Z0-9]"]
+	s60 [label="s60: 
+identifier"]
+	s61 [label="s61: 
+identifier"]
+	s62 [label="s62: 
+identifier"]
+	s63 [label="s63: 
+identifier"]
+	s64 [label="s64: 
+identifier"]
+	s65 [label="s65: 
+identifier"]
+	s66 [label="s66: 
+string"]
+	s0 -> s61 [label=s]
+	s61 -> s62 [label=t]
+	s62 -> s63 [label=r]
+	s63 -> s64 [label=i]
+	s64 -> s65 [label=n]
+	s65 -> s66 [label=g]
+	s66 -> s67 [label="[a-zA-Z0-9]"]
+}

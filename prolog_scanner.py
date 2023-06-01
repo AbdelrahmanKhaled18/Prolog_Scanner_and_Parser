@@ -116,22 +116,7 @@ class Scanner:
                 elif word in ReservedWords:
                     Tokens.append(Token(word, ReservedWords[word]))
                 elif word in Operators:
-                    if word == "<=" or word == ">=" or word == "<>" or word == "<" or word == ">" or word == "=":
-                        Tokens.append(Token(word, Token_type.Relational_op))
-                    elif word == "+" or word == "-" or word == "*" or word == "/":
-                        Tokens.append(Token(word, Token_type.Arithmetic_op))
-                    elif word == ",":
-                        Tokens.append(Token(word, Token_type.And))
-                    elif word == ";":
-                        Tokens.append(Token(word, Token_type.Or))
-                    elif word == ".":
-                        Tokens.append(Token(word, Token_type.Dot))
-                    elif word == "(":
-                        Tokens.append(Token(word, Token_type.open_bracket))
-                    elif word == ":-":
-                        Tokens.append(Token(word, Token_type.imply))
-                    else:
-                        Tokens.append(Token(word, Token_type.close_bracket))
+                    Tokens.append(Token(word, Operators[word]))
                 elif re.match("^[a-z][a-zA-Z0-9_]*$", word):
                     Tokens.append(Token(word, Token_type.identifier))
                 elif re.match("^[A-Z_][a-zA-Z0-9_]*$", word):

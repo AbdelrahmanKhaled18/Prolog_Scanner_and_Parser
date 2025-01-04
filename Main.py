@@ -4,57 +4,53 @@ from PIL import ImageTk
 import pandas as pd
 import pandastable as pt
 import prolog_dfa
-import prolog_scanner
 import prolog_parser
+import prolog_scanner
 
 
 def operators_DFA_button():
-
     op_dfa_window = tk.Toplevel(window)
     op_dfa_window.geometry("700x700")
     op_dfa_window.title("Operators DFA")
 
     prolog_dfa.generate_dfa_operators()
 
-    op_image = Image.open("dfa_output\dfa_operators.gv.png")
-    op_image = op_image.resize([700, 700])
+    op_image = Image.open("dfa_output/operators.png")
+    op_image = op_image.resize((700, 700))
     op_image = ImageTk.PhotoImage(op_image)
     tk.Label(op_dfa_window, image=op_image).pack()
     op_dfa_window.mainloop()
 
 
 def res_DFA_button():
-
     res_dfa_window = tk.Toplevel(window)
     res_dfa_window.geometry("700x700")
     res_dfa_window.title("Reserved Words DFA")
 
     prolog_dfa.generate_dfa_res()
 
-    res_image = Image.open("dfa_output\dfa_reserved_words.gv.png")
-    res_image = res_image.resize([700, 700])
+    res_image = Image.open("dfa_output/reserved_words.png")
+    res_image = res_image.resize((700, 700))
     res_image = ImageTk.PhotoImage(res_image)
     tk.Label(res_dfa_window, image=res_image).pack()
     res_dfa_window.mainloop()
 
 
 def values_DFA_button():
-
     values_dfa_window = tk.Toplevel(window)
     values_dfa_window.geometry("700x700")
     values_dfa_window.title("Values DFA")
 
     prolog_dfa.generate_dfa_values()
 
-    values_image = Image.open("dfa_output\dfa_values.gv.png")
-    values_image = values_image.resize([700, 700])
+    values_image = Image.open("dfa_output/dfa_values.gv.png")
+    values_image = values_image.resize((700, 700))
     values_image = ImageTk.PhotoImage(values_image)
     tk.Label(values_dfa_window, image=values_image).pack()
     values_dfa_window.mainloop()
 
 
 def parse_tree_button():
-
     input = textarea.get('1.0', 'end')
     scanner = prolog_scanner.Scanner(input)
     parse = prolog_parser.Parser(scanner)
@@ -64,7 +60,6 @@ def parse_tree_button():
 
 
 def tokens_list_button():
-
     token_window = tk.Toplevel(window)
     token_window.geometry("700x700")
     token_window.title("Token List")
@@ -133,6 +128,3 @@ token_list.grid(row=1, column=4, sticky="nsew")
 
 # Start the Tkinter event loop
 window.mainloop()
-
-
-

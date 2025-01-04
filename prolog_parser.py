@@ -22,8 +22,8 @@ class Parser:
         self.current_token = self.scanner.get_next_token()
 
     def add_node(self, node, loc0=None, loc1=None):
-        if loc1 == None:
-            if loc0 == None:
+        if loc1 is None:
+            if loc0 is None:
                 self.Nodes.append(node)
             else:
                 self.Nodes[loc0].append(node)
@@ -43,15 +43,15 @@ class Parser:
                    and self.current_token.token_type != Token_type.goal and self.current_token != None):
                 self.advance()
         elif self.section == 'goal':
-            while (self.current_token != None):
+            while self.current_token is not None:
                 self.advance()
 
-        if self.current_token != None and self.current_token.token_type == Token_type.Dot:
+        if self.current_token is not None and self.current_token.token_type == Token_type.Dot:
             self.advance()
 
     def consume(self, expected_token_type, node=None, loc0=None, loc1=None):
         if self.current_token is not None and self.current_token.token_type == expected_token_type:
-            if node != None:
+            if node is not None:
                 self.add_node(node, loc0, loc1)
             self.advance()
             return True
@@ -71,7 +71,7 @@ class Parser:
     def section_predicates(self):
         if self.consume(Token_type.predicates, 'Predicates'):
             self.add_node(['predicates'])
-        while self.current_token != None and self.current_token.token_type != Token_type.clauses:
+        while self.current_token is not None and self.current_token.token_type != Token_type.clauses:
             self.predicate_declaration()
 
     def predicate_declaration(self):

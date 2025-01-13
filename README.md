@@ -58,8 +58,4 @@ This project implements a scanner and parser for the Prolog language. It include
 - `prolog_scanner.py`: Contains the scanner implementation.
 - `README.md`: Project documentation.
 
-## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.# Prolog_Scanner_and_Parser
-
-Scanner and parser for prolog language with the language description as a pdf and generating dfa and parse tree using tkinter simple GUI
